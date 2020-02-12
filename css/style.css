@@ -134,24 +134,25 @@ main .layer__quote {
   main .layer__quote {
     line-height: 0.6;
     padding: 20px 10px;
+    margin: 0;
   }
 }
 
-/* line 63, src/sass/style.scss */
+/* line 64, src/sass/style.scss */
 main .layer__quote::before {
   content: open-quote;
   font-size: 26px;
   vertical-align: -0.2em;
 }
 
-/* line 69, src/sass/style.scss */
+/* line 70, src/sass/style.scss */
 main .layer__quote::after {
   content: close-quote;
   font-size: 26px;
   vertical-align: -0.2em;
 }
 
-/* line 77, src/sass/style.scss */
+/* line 78, src/sass/style.scss */
 main .bottom {
   background: url(../images/bottom-bg-min.jpg);
   background-attachment: fixed;
@@ -172,20 +173,20 @@ main .bottom:before {
   z-index: -100;
 }
 
-/* line 80, src/sass/style.scss */
+/* line 81, src/sass/style.scss */
 main .bottom__content-body {
   right: 5%;
   color: #9aa58d;
 }
 
 @media (max-width: 500px) {
-  /* line 80, src/sass/style.scss */
+  /* line 81, src/sass/style.scss */
   main .bottom__content-body {
     right: 0;
   }
 }
 
-/* line 89, src/sass/style.scss */
+/* line 90, src/sass/style.scss */
 main .top {
   background: url(../images/top-bg-min.jpg);
   background-attachment: fixed;
@@ -208,20 +209,20 @@ main .top:before {
   z-index: -100;
 }
 
-/* line 95, src/sass/style.scss */
+/* line 96, src/sass/style.scss */
 main .top__content-body {
   left: 5%;
   color: #655a72;
 }
 
 @media (max-width: 500px) {
-  /* line 95, src/sass/style.scss */
+  /* line 96, src/sass/style.scss */
   main .top__content-body {
     left: 0;
   }
 }
 
-/* line 104, src/sass/style.scss */
+/* line 105, src/sass/style.scss */
 main .handle {
   position: absolute;
   height: 100%;
@@ -239,13 +240,13 @@ main .handle {
           transform-origin: top;
 }
 
-/* line 119, src/sass/style.scss */
+/* line 120, src/sass/style.scss */
 main__top {
   margin-left: -1000px;
   width: calc(50vw + 1000px);
 }
 
-/* line 123, src/sass/style.scss */
+/* line 124, src/sass/style.scss */
 main__top--content-wrap {
   margin-left: 1000px;
 }
