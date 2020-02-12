@@ -1,0 +1,123 @@
+@import "components/vars";
+@import "components/mixins";
+@import "components/print";
+
+@include main;
+
+main {
+  #wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+  }
+
+  .layer {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+
+    &__content-wrap {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+    }
+
+    &__content-body {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      transform: translateY(-50%);
+      color: #ffffff;
+      @include media-max-width(500) {
+        width: 30%;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      width: 35%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__heading {
+      color: #fdfdfd;
+    }
+
+    &__quote {
+      margin: 0.5em 10px;
+      padding: 0 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-style: italic;
+      border: 2px solid $tertiary_clr;
+      border-radius: 50px 0 50px 0;
+      &::before {
+        content: open-quote;
+        font-size: 26px;
+        vertical-align: -0.2em;
+      }
+
+      &::after {
+        content: close-quote;
+        font-size: 26px;
+        vertical-align: -0.2em;
+      }
+    }
+  }
+
+  .bottom {
+    @include background($bottom-bg-image);
+    z-index: 5;
+    &__content-body {
+      right: 5%;
+      color: lighten($color: $primary_clr, $amount: 10);
+      @include media-max-width(500) {
+        right: 0;
+      }
+    }
+  }
+
+  .top {
+    @include background($top-bg-image);
+    color: $primary_clr;
+    z-index: 10;
+    width: 50vw;
+
+    &__content-body {
+      left: 5%;
+      color: darken($color: $secondary_clr, $amount: 10);
+      @include media-max-width(500) {
+        left: 0;
+      }
+    }
+  }
+
+  .handle {
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: $tertiary_clr;
+    width: 10px;
+    top: 0;
+    left: 50%;
+    z-index: 20;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    transform-origin: top;
+  }
+
+  &__top {
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+
+    &--content-wrap {
+      margin-left: 1000px;
+    }
+  }
+}
