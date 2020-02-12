@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", (function() {
   }));
 
   wrapper.addEventListener("touchmove", (function(e) {
-    delta = (e.changedTouches[0].clientX - window.innerWidth / 2) * 0.5;
+    /* delta = (e.changedTouches[0].clientX - window.innerWidth / 2) * 0.5; */
     handle.style.left = e.changedTouches[0].clientX + delta + "px";
-    topLayer.style.width = e.changedTouches[0].clientX + delta + "px";
+    topLayer.style.width = e.changedTouches[0] + delta + "px";
   }));
 }));
