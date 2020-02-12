@@ -56,6 +56,10 @@ main {
       font-style: italic;
       border: 2px solid $tertiary_clr;
       border-radius: 50px 0 50px 0;
+      @include media-max-width(500) {
+        line-height: 0.6;
+        padding: 20px 0;
+      }
       &::before {
         content: open-quote;
         font-size: 26px;
