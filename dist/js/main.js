@@ -32,25 +32,25 @@ let slides = [
     title: "Pera Perčina",
     type: "sandman",
     content: "lorem ipsum dolor",
-    image: "../images/carousel/slide1.jpg"
+    image: "./images/carousel/slide1.jpg"
   },
   {
     title: "Jaza Jazura",
     type: "",
     content: "lorem ipsum dolor",
-    image: "../images/carousel/slide2.jpg"
+    image: "./images/carousel/slide2.jpg"
   },
   {
     title: "Pera v Jaza",
     type: "Čortanovci",
     content: "lorem ipsum dolor",
-    image: "../images/carousel/slide3.jpg"
+    image: "./images/carousel/slide3.jpg"
   },
   {
     title: "Jaza",
     type: "",
     content: "lorem ipsum dolor",
-    image: "../images/carousel/slide4.jpg"
+    image: "./images/carousel/slide4.jpg"
   }
 ];
 
