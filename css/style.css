@@ -63,6 +63,73 @@ a {
 }
 
 /* line 7, src/sass/style.scss */
+header {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: center;
+  color: #b76415;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+/* line 20, src/sass/style.scss */
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 29, src/sass/style.scss */
+header #time {
+  font-size: 8rem;
+  position: relative;
+  color: #a7b19b;
+  z-index: 100;
+}
+
+/* line 34, src/sass/style.scss */
+header #time:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(183, 100, 21, 0.8);
+  z-index: -50;
+}
+
+@media (max-width: 700px) {
+  /* line 29, src/sass/style.scss */
+  header #time {
+    font-size: 4rem;
+  }
+}
+
+/* line 48, src/sass/style.scss */
+header h1 {
+  margin-bottom: 3rem;
+  z-index: 50;
+}
+
+/* line 54, src/sass/style.scss */
 main {
   width: 100%;
   height: 100vh;
@@ -75,7 +142,7 @@ main {
           flex-flow: column;
 }
 
-/* line 12, src/sass/style.scss */
+/* line 59, src/sass/style.scss */
 main #wrapper {
   position: relative;
   width: 100%;
@@ -83,7 +150,7 @@ main #wrapper {
   overflow: hidden;
 }
 
-/* line 19, src/sass/style.scss */
+/* line 66, src/sass/style.scss */
 main .layer {
   position: absolute;
   width: 100vw;
@@ -91,7 +158,7 @@ main .layer {
   overflow: hidden;
 }
 
-/* line 25, src/sass/style.scss */
+/* line 72, src/sass/style.scss */
 main .layer__content-wrap {
   position: absolute;
   width: 100vw;
@@ -101,7 +168,7 @@ main .layer__content-wrap {
           transform: translateY(-50%);
 }
 
-/* line 33, src/sass/style.scss */
+/* line 80, src/sass/style.scss */
 main .layer__content-body {
   width: 25%;
   position: absolute;
@@ -113,13 +180,13 @@ main .layer__content-body {
 }
 
 @media (max-width: 500px) {
-  /* line 33, src/sass/style.scss */
+  /* line 80, src/sass/style.scss */
   main .layer__content-body {
     width: 30%;
   }
 }
 
-/* line 45, src/sass/style.scss */
+/* line 92, src/sass/style.scss */
 main .layer__img {
   position: absolute;
   max-width: 100%;
@@ -130,12 +197,12 @@ main .layer__img {
           transform: translate(-50%, -50%);
 }
 
-/* line 54, src/sass/style.scss */
+/* line 101, src/sass/style.scss */
 main .layer__heading {
   color: #fdfdfd;
 }
 
-/* line 58, src/sass/style.scss */
+/* line 105, src/sass/style.scss */
 main .layer__quote {
   margin: 0.5em 10px;
   padding: 0 10px;
@@ -147,7 +214,7 @@ main .layer__quote {
 }
 
 @media (max-width: 500px) {
-  /* line 58, src/sass/style.scss */
+  /* line 105, src/sass/style.scss */
   main .layer__quote {
     line-height: 0.6;
     padding: 20px 5px;
@@ -155,21 +222,21 @@ main .layer__quote {
   }
 }
 
-/* line 71, src/sass/style.scss */
+/* line 118, src/sass/style.scss */
 main .layer__quote::before {
   content: open-quote;
   font-size: 26px;
   vertical-align: -0.2em;
 }
 
-/* line 77, src/sass/style.scss */
+/* line 124, src/sass/style.scss */
 main .layer__quote::after {
   content: close-quote;
   font-size: 26px;
   vertical-align: -0.2em;
 }
 
-/* line 85, src/sass/style.scss */
+/* line 132, src/sass/style.scss */
 main .bottom {
   background: url(../images/bottom-bg-min.jpg);
   background-attachment: fixed;
@@ -178,20 +245,20 @@ main .bottom {
   z-index: 5;
 }
 
-/* line 88, src/sass/style.scss */
+/* line 135, src/sass/style.scss */
 main .bottom__content-body {
   right: 5%;
   color: #9aa58d;
 }
 
 @media (max-width: 500px) {
-  /* line 88, src/sass/style.scss */
+  /* line 135, src/sass/style.scss */
   main .bottom__content-body {
     right: 0;
   }
 }
 
-/* line 97, src/sass/style.scss */
+/* line 144, src/sass/style.scss */
 main .top {
   background: url(../images/top-bg-min.jpg);
   background-attachment: fixed;
@@ -202,20 +269,20 @@ main .top {
   width: 50vw;
 }
 
-/* line 103, src/sass/style.scss */
+/* line 150, src/sass/style.scss */
 main .top__content-body {
   left: 5%;
   color: #655a72;
 }
 
 @media (max-width: 500px) {
-  /* line 103, src/sass/style.scss */
+  /* line 150, src/sass/style.scss */
   main .top__content-body {
     left: 0;
   }
 }
 
-/* line 112, src/sass/style.scss */
+/* line 159, src/sass/style.scss */
 main .handle {
   position: absolute;
   height: 100%;
@@ -233,18 +300,18 @@ main .handle {
           transform-origin: top;
 }
 
-/* line 127, src/sass/style.scss */
+/* line 174, src/sass/style.scss */
 main__top {
   margin-left: -1000px;
   width: calc(50vw + 1000px);
 }
 
-/* line 131, src/sass/style.scss */
+/* line 178, src/sass/style.scss */
 main__top--content-wrap {
   margin-left: 1000px;
 }
 
-/* line 136, src/sass/style.scss */
+/* line 183, src/sass/style.scss */
 main #carousel-container {
   height: 100vh;
   width: 100%;
@@ -254,7 +321,7 @@ main #carousel-container {
   background-position: center;
 }
 
-/* line 141, src/sass/style.scss */
+/* line 188, src/sass/style.scss */
 main #carousel-container .carousel {
   position: relative;
   overflow: hidden;
@@ -262,7 +329,7 @@ main #carousel-container .carousel {
   height: 100%;
 }
 
-/* line 147, src/sass/style.scss */
+/* line 194, src/sass/style.scss */
 main #carousel-container .carousel__slide {
   position: absolute;
   -webkit-transform: translateX(100%);
@@ -281,7 +348,7 @@ main #carousel-container .carousel__slide {
   background-repeat: no-repeat;
 }
 
-/* line 160, src/sass/style.scss */
+/* line 207, src/sass/style.scss */
 main #carousel-container .carousel__slide .carousel__content {
   position: absolute;
   width: 100%;
@@ -299,34 +366,34 @@ main #carousel-container .carousel__slide .carousel__content {
   border-radius: 0 0 50px 0;
 }
 
-/* line 172, src/sass/style.scss */
+/* line 219, src/sass/style.scss */
 main #carousel-container .carousel__slide .carousel__content .carousel__title {
   font: 24px;
   font-style: italic;
   margin-bottom: 10px;
 }
 
-/* line 176, src/sass/style.scss */
+/* line 223, src/sass/style.scss */
 main #carousel-container .carousel__slide .carousel__content .carousel__title span {
   margin-top: 5px;
   display: block;
   font-weight: 300;
 }
 
-/* line 184, src/sass/style.scss */
+/* line 231, src/sass/style.scss */
 main #carousel-container .carousel__slide.active {
   opacity: 1;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
-/* line 188, src/sass/style.scss */
+/* line 235, src/sass/style.scss */
 main #carousel-container .carousel__slide.active .carousel__content {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
-/* line 194, src/sass/style.scss */
+/* line 241, src/sass/style.scss */
 main #carousel-container .carousel__btns {
   position: absolute;
   z-index: 999;
@@ -343,7 +410,7 @@ main #carousel-container .carousel__btns {
   width: 100%;
 }
 
-/* line 204, src/sass/style.scss */
+/* line 251, src/sass/style.scss */
 main #carousel-container .carousel__btns .carousel__btn {
   width: 50px;
   height: 50px;
@@ -360,7 +427,7 @@ main #carousel-container .carousel__btns .carousel__btn {
   transition: background 0.2s linear, color 0.2s ease-out;
 }
 
-/* line 217, src/sass/style.scss */
+/* line 264, src/sass/style.scss */
 main #carousel-container .carousel__btns .carousel__btn:hover {
   background: #b76415;
   color: #7e708f;

@@ -1,4 +1,63 @@
 /*! project-name v0.0.1 | (c) 2020 Francuski Miroslav | MIT License | http://link-to-your-git-repo.com */
+// dynamic landing page with clock
+const time = document.getElementById("time");
+const greeting = document.getElementById("greeting");
+const name = document.getElementById("name");
+
+// show time
+function showTime() {
+  let today = new Date(),
+    hour = today.getHours(),
+    min = today.getMinutes(),
+    sec = today.getSeconds();
+
+  /* // set AM or PM
+  const amPm = hour >= 12 ? "PM" : "AM";
+
+  // 12 HOUR FORMAT
+  hour = hour % 12 || 12; */
+
+  // output Time
+  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
+    sec
+  )}`;
+
+  setTimeout(showTime, 1000);
+}
+
+// add zero to min and sec
+function addZero(n) {
+  return (parseInt(n, 10) < 10 ? "0" : "") + n;
+}
+
+// set background and greeting and name
+function setBgGreetName() {
+  let today = new Date();
+  hour = today.getHours();
+  let header = document.querySelector("header");
+
+  if (hour < 12) {
+    // morning
+    header.style.backgroundImage = "url(../images/morning.jpg)";
+    greeting.textContent = "Dombro jutro";
+    name.textContent = "ČupeDupe";
+  } else if (hour < 18) {
+    // afternoon
+    header.style.backgroundImage = "url(../images/afternoon.jpg)";
+    greeting.textContent = "Dombar dan";
+    name.textContent = "JazaJazura";
+  } else {
+    // evening
+    header.style.backgroundImage = "url(../images/evening.jpg)";
+    greeting.textContent = "Dombro veče";
+    name.textContent = "PeraPerčina";
+  }
+}
+
+// Run time
+showTime();
+setBgGreetName();
+
 // split/screen slider
 document.addEventListener("DOMContentLoaded", (function() {
   let wrapper = document.getElementById("wrapper");
